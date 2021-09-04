@@ -1,0 +1,24 @@
+version: '2'
+services:
+  web:
+    image: my_web
+    container_name: web
+    build: ./web/.
+    hostname: web
+    privileged: true
+    ports:
+      - 80:80
+    volumes:
+      - ./mount/web:/var/www/html
+    tty: true
+  db:
+    image: my_db
+    container_name: db
+    build: ./db/.
+    hostname: db
+    privileged: true
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mount/db/mysql:/var/lib/mysql
+    tty: true
