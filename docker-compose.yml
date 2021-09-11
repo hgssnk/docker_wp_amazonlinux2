@@ -22,3 +22,4 @@ services:
     volumes:
       - ./mount/db/mysql:/var/lib/mysql
     tty: true
+# hoge
