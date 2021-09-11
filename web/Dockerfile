@@ -7,7 +7,7 @@ RUN yum update -y \
 
 # php関連
 RUN amazon-linux-extras enable php7.3
-RUN yum -y install php-cli php-pdo php-fpm php-json php-mysqlnd
+RUN yum install php php-gd php-mysqlnd php-xmlrpc -y
 
 # WordPress設置
 #RUN wget -P /var/www/html $wp
