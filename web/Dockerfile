@@ -3,7 +3,7 @@ ENV wp https://ja.wordpress.org/latest-ja.tar.gz
 
 # apache
 RUN yum update -y \
-    && yum -y install httpd procps wget tar systemd-sysv
+    && yum -y install httpd procps wget tar systemd-sysv git
 
 # php関連
 RUN amazon-linux-extras enable php7.3
